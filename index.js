@@ -5,7 +5,7 @@ const logger = require('koa-logger');         //npm install koa-logger
 require('dotenv').config();                   //npm install dotenv
 
 const errorHandler = require('./middlewares/errorHandler');
-const router = require('./router');
+const router = require('./routes');
 
 const app = new Koa();
 
