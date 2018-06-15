@@ -3,7 +3,7 @@ const bodyParser = require('koa-bodyparser'); //npm install koa-bodyparser
 const cors = require('@koa/cors');            //npm install cors
 const logger = require('koa-logger');         //npm install koa-logger
 require('dotenv').config();                   //npm install dotenv
-
+require('./databases/db');
 const errorHandler = require('./middlewares/errorHandler');
 const router = require('./routes');
 
