@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
-  fbId: Number,
+  fbId: String,
   name: String,
   email: String,
   photo: String,
-  references: [],
-  nannies: []
+  friends: [],
+  references: Array,
+  nannies: Array
 })
 
 module.exports = mongoose.model('User', schema);

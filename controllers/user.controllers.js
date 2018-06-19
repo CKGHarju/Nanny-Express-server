@@ -5,17 +5,36 @@ const getUser = async (ctx) => {
 } 
 
 const postUser = async (ctx) => {
-  const user = await User.findOne({fbId: ctx.request.body.id})
+  let user = await findUser(ctx.request.body.id);
   if (!user) {
-    await User.create({
+    user = await User.create({
       fbId: ctx.request.body.id,
       name: ctx.request.body.name,
-      photo: `https://graph.facebook.com/${ctx.request.body.id}/picture?type=normal`
+      photo: `https://graph.facebook.com/${ctx.request.body.id}/picture?type=normal`,
+      friends: ctx.request.body.friends,
+      nannies: ctx.request.body.nannies,
     })
-    ctx.response.body = ctx.request.body;
+    //HERE
+    user.friends = await attachFriends(user.friends);
+    console.log(user.friends);
+    ctx.response.body = user;
   } else {
+    //HERE
+    user.friends = await attachFriends(user.friends);
     ctx.response.body = user;
   }
+}
+
+const findUser = async (userID) => {
+  const user = await User.findOne({fbId: userID});
+  if (user) return user;
+  else return null;
+}
+
+const attachFriends = async (friends) => {
+  return await Promise.all(friends.map(friendID => {
+    return findUser(friendID);
+  }))
 }
 
 module.exports = {
