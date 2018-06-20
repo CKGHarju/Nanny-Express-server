@@ -1,7 +1,8 @@
 const User = require('../models/user.model');
 
-const getUser = async (ctx) => {
-
+const putUser = async (ctx) => {
+  const user = await User.findOneAndUpdate({fbId: ctx.request.body.fbId}, {nannies: ctx.request.body.nannies}, {new: true})
+  ctx.response.body = user
 } 
 
 const postUser = async (ctx) => {
@@ -38,6 +39,6 @@ const attachFriends = async (friends) => {
 }
 
 module.exports = {
-  getUser,
+  putUser,
   postUser
 }
