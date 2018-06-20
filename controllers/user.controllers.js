@@ -2,6 +2,7 @@ const User = require('../models/user.model');
 
 const putUser = async (ctx) => {
   const user = await User.findOneAndUpdate({fbId: ctx.request.body.fbId}, {nannies: ctx.request.body.nannies}, {new: true})
+  user.friends = await attachFriends(user.friends);
   ctx.response.body = user
 } 
 
