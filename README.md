@@ -55,9 +55,11 @@ Start the server, run:
 Navigate to [Nanny-Express-client](https://github.com/edgarcheverier/Nanny-Express-client) and follow the instructions in the README.md to finish the setup and run the application.
 
 # Project Contributors
-- [Christopher Harju](https://github.com/CKGHarju/), FullStack
-- [Jon Portella](https://github.com/jportella93), FullStack
-- [Edgar Cheverier](https://github.com/edgarcheverier), FullStack
+Edgar Cheverier - [Github](https://github.com/edgarcheverier) - [LinkedIn](https://es.linkedin.com/in/edgar-hugo-cheverier-aguilar-886b3a86)
+
+Christopher Harju - [Github](https://github.com/CKGHarju) - [LinkedIn](https://www.linkedin.com/in/christopher-harju-909b2362/)   
+
+Jon Portella - [Github](https://github.com/jportella93) - [LinkedIn](https://linkedin.com/in/jonportella)
 
 - [Cristina Guimaraes](https://github.com/cristinaguimaraes), Original Project Idea
 
