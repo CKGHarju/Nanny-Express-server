@@ -53,3 +53,13 @@ Start the server, run:
 ## 5. You are ready to set up the front end!
 
 Navigate to [Nanny-Express-client](https://github.com/edgarcheverier/Nanny-Express-client) and follow the instructions in the README.md to finish the setup and run the application.
+
+# Project Contributors
+- [Christopher Harju](https://github.com/CKGHarju/), FullStack
+- [Jon Portella](https://github.com/jportella93), FullStack
+- [Edgar Cheverier](https://github.com/edgarcheverier), FullStack
+
+- [Cristina Guimaraes](https://github.com/cristinaguimaraes), Original Project Idea
+
+## Project status
+This project is a fresh start of [Cristina Guimaraes](https://github.com/cristinaguimaraes/Nanny-Express-client) original Nanny-Express project. 
